@@ -1,28 +1,15 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8">
-  <meta name="publiqueversion" content=" Publique! 2.8 RC 5 - 22/11/2016 - 16:47">
-  <meta name="publiquecopyright" content=" 1998-2016 Fábrica Digital. All rights reserved.">
-  <link rel="stylesheet" type="text/css" href="{%  static  'css/404.css' %}">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" media="screen" rel="stylesheet">
-  <script src="{%  static  'js/jquery.js' %}"></script>
-</head>
-<body class="plain error-page-wrapper background-color background-image chromium chromium60 ubuntu">
-  <div class="content-container">
-    <div class="head-line secondary-text-color">404</div>
-    <div class="subheader primary-text-color">Ops! A p&aacute;gina que voc&ecirc; procura n&atilde;o existe.</div>
-    <hr>
-    <div class="clearfix"></div>
-    <div class="context primary-text-color">
-      <p>Verifique se a sua digita&ccedil;&atilde;o est&aacute; correta.<br>Se voc&ecirc; achar que houve algum erro, entre em contato com o administrador.</p>
+{% extends 'base.html' %}
+
+{% block title %}Eventex - 404{% endblock title %}
+
+{% block content %}
+<section>
+    <div class="content row padding-bottom-3 desktop-12 container">
+        <h1>404</h1>
+        <h2>Página não encontrada</h2>
+        <div class="desktop-6">
+            <p>O endereço que você solicitou não existe.</p>
+        </div>
     </div>
-    <div class="buttons-container">
-      <a class="border-button" href="javascript:history.back();"> Voltar para a p&aacute;gina anterior</a>
-      <a class="border-button" href="/"> Voltar a P&aacute;gina inicial </a>
-    </div>
-  </div>
-  <script src="{%  static  'js/404.js' %}"></script>
-</body>
-</html>
+</section>
+{% endblock content %}

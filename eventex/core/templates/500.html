@@ -1,30 +1,19 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8">
-  <meta name="publiqueversion" content=" Publique! 2.8 RC 5 - 22/11/2016 - 16:47">
-  <meta name="publiquecopyright" content=" 1998-2016 Fábrica Digital. All rights reserved.">
-  <link rel="stylesheet" type="text/css" href="{%  static  'css/404.css' %}">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" media="screen" rel="stylesheet">
-  <script src="{%  static  'js/jquery.js' %}"></script>
-</head>
-<body class="plain error-page-wrapper background-color background-image chromium chromium60 ubuntu">
-  <div class="content-container">
-    <div class="head-line secondary-text-color">500</div>
-    <div class="subheader primary-text-color">Erro no servidor.</div>
-    <hr>
-    <div class="clearfix"></div>
-    <div class="context primary-text-color">
-        <p>Sua requisi&ccedil;&atilde;o n&atilde;o pode ser completada no momento. Por favor procure o administrador do servidor.</p>
-        <p>
-          
-        </p>
+{% extends 'base.html' %}
+
+{% block title %}500. Erro interno{% endblock title %}
+
+{% block content %}
+<section>
+    <div class="content row padding-bottom-3 desktop-12 container">
+        <h1>500</h1>
+        <h2>Erro interno inesperado.</h2>
+        <div class="desktop-6">
+            <p>Desculpe. Ocorreu um erro inesperado.</p>
+            <p>
+                Nossa equipe já foi notificada do problema.<br>
+                Caso necessário entre em contato com <a href="mailto:suporte@eventex.com.br?subjetc=500 Erro interno">suporte@eventex.com.br</a>.
+            </p>
+        </div>
     </div>
-    <div class="buttons-container">
-      <a class="border-button">Para verificar se o erro foi resolvido, clique aqui</a>
-    </div>
-  </div>
-  <script src="{%  static  'js/404.js' %}"></script>
-</body>
-</html>
+</section>
+{% endblock content %}
